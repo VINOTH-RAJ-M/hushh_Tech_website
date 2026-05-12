@@ -80,6 +80,7 @@ import AuthRequiredRoute from './components/AuthRequiredRoute';
 import HushhHackathonPage from './pages/hushh-hackathon/ui';
 import MetricsPage from './pages/metrics';
 import NotFound from './pages/NotFound';
+import NewsletterPage from './pages/newsletter/ui';
 
 const KaiIndiaApp = React.lazy(() => import('./kai-india/pages'));
 
@@ -388,6 +389,7 @@ function App() {
             {/* NDA Admin Page - Password protected view of all NDA agreements */}
             <Route path='/nda-admin' element={<NDAAdminPage />} />
             {/* 404 Not Found - Must be last route */}
+            <Route path="/newsletter" element={<NewsletterPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </ContentWrapper>
